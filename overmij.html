@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Mij</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Aangepaste knopstijl */
+        #read-more-btn {
+            background-color:  #5e382d; /* Aangepaste kleur (bijv. coral) */
+            color: white; /* Tekstkleur wit */
+            border: none; /* Geen rand */
+            padding: 10px 20px; /* Opvulling van de knop */
+            font-size: 16px; /* Lettergrootte */
+            border-radius: 5px; /* Afronden van de hoeken */
+            cursor: pointer; /* Verander cursor naar pointer */
+            transition: background-color 0.3s ease; /* Vloeibare overgang voor achtergrondkleur */
+        }
+
+        /* Hover effect voor de knop */
+        #read-more-btn:hover {
+            background-color: #5e382d; /* Donkerdere kleur bij hover */
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg boheme-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mijn Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="overmij.html">Over mij</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container text-center content">
+        <h1>Mijn Profiel</h1>
+        <div class="d-flex flex-column align-items-center">
+            <p class="text-center">Mijn naam is Beyhan Pehlivan en ik heb een brede achtergrond in verschillende sectoren, maar mijn echte passie ligt in design. Ik behaalde mijn diploma in Onthaal en Public Relations in het secundair onderwijs en ontwikkelde tijdens mijn werk als onthaalbediende in een fitness sterke communicatieve vaardigheden.</p>
+            <p class="text-center">Na mijn middelbare school begon ik aan een universitaire studie Architectuur, aangetrokken door mijn analytische vaardigheden en liefde voor esthetiek. Hoewel ik na twee jaar besloot te stoppen, bleef mijn interesse in design en creativiteit sterk aanwezig. In de daaropvolgende jaren deed ik waardevolle ervaring op in de farmaceutische sector als productiemedewerker en in de logistiek als administratief medewerker.</p>
+            <p class="text-center">Uiteindelijk besefte ik dat mijn ware passie ligt in het combineren van creativiteit en technologie. Daarom focus ik me nu volledig op webdesign, waar ik mijn oog voor detail, gevoel voor esthetiek en technische kennis kan inzetten om boeiende en functionele websites te ontwikkelen. Mijn doel is om gebruiksvriendelijke en visueel aantrekkelijke digitale ervaringen te creëren.</p>
+            
+            <!-- Verborgen tekst die pas zichtbaar wordt bij klikken op de knop -->
+            <div id="extra-text" style="display: none;">
+                <p class="text-center">Naast mijn professionele ervaring ben ik ook gepassioneerd door nieuwe technologieën, altijd op zoek naar manieren om mijn vaardigheden te verbeteren en te groeien als ontwerper. In mijn vrije tijd experimenteren ik graag met nieuwe ontwerpsoftware en blijf ik op de hoogte van de laatste trends in webdesign en technologie.</p>
+            </div>
+            
+            <!-- Lees meer knop -->
+            <button id="read-more-btn" class="btn mt-3">Lees meer</button>
+        </div>
+    </main>    
+    <br>
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Website van Beyhan Pehlivan. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Als de knop wordt geklikt, toggle de zichtbaarheid van de extra tekst
+            $("#read-more-btn").click(function(){
+                $("#extra-text").toggle(); // Toon of verberg de extra tekst
+                // Verander de tekst van de knop op basis van de zichtbaarheid
+                if ($("#extra-text").is(":visible")) {
+                    $("#read-more-btn").text("Lees minder");
+                } else {
+                    $("#read-more-btn").text("Lees meer");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

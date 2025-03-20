@@ -1,0 +1,49 @@
+/* Bohemian kleurenpalet */
+.boheme-navbar {
+    background-color: #8D6E63; /* Warme bruintint */
+}
+
+.boheme-navbar .navbar-brand, 
+.boheme-navbar .nav-link {
+    color: #FFF3E0 !important; /* Zachte crème kleur */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.boheme-navbar .nav-link:hover {
+    color: #FFD54F !important; /* Gouden accentkleur */
+}
+
+/* Navbar & Buttons */
+.navbar {
+    background-color: #8D6E63; /* Overschrijft Bootstrap */
+}
+
+.btn-primary {
+    background-color: #FFD54F;
+    border: none;
+    color: #5D4037;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #FFB300;
+}
+
+/* Aanpassen container voor kleinere schermen */
+.container {
+    max-width: 960px;
+}
+
+/* Footer stijlen */
+.footer {
+    background-color: #5D4037; /* Donkerbruin */
+    color: white;
+    padding: 20px 0;
+}
+
+/* Contactformulier stijlen */
+form .form-control {
+    border-radius: 10px;
+    border: 2px solid #8D6E63;
+}
